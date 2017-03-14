@@ -1,0 +1,143 @@
+/* PHASE 0: Reset */
+
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small, select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Clearfix */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 36px;
+  margin: 25px;
+}
+
+.search {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  border-bottom: 1px solid black;
+  padding: 2px;
+}
+
+.add-player-form {
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.add-player-input {
+  width: 160px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.add-player-button {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.table {
+
+}
+
+.table-header {
+  width: 650px;
+  display: flex;
+  justify-content: space-between;;
+  font-size: 18px;
+  border-bottom: 1px solid black;
+
+}
+
+.table-header-title {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.all-table-data {
+
+}
+
+.table-data {
+  display: flex;
+  margin: 5px 0;
+}
+
+.table-data-part {
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-data-info {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.table-data-remove {
+  margin-left:10px;
+}

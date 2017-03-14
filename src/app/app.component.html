@@ -1,3 +1,33 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="title"> Basketball Players </div>
+
+  <div class="search">
+    <span>Search:</span>
+    <input [(ngModel)]="searchText" placeholder="Name, Team, or Position" class="search-input">
+  </div>
+
+  <div class="add-player-form">
+    <input placeholder="Name" [(ngModel)]="newBasketballPlayer.name" class="add-player-input">
+    <input placeholder="Team" [(ngModel)]="newBasketballPlayer.team" class="add-player-input">
+    <input placeholder="Position" [(ngModel)]="newBasketballPlayer.position" class="add-player-input">
+    <button (click)="addPlayer()" class="add-player-button">Add Player</button>
+  </div>
+
+  <div class="table">
+    <ul class="table-header">
+      <button (click)="sortByName()" class="table-header-title"> Name </button>
+      <button (click)="sortByTeam()" class="table-header-title"> Team </button>
+      <button (click)="sortByPosition()" class="table-header-title"> Position </button>
+    </ul>
+    <ul class="all-table-data">
+      <li *ngFor="let player of players" class="table-data">
+        <div class="table-data-part">
+          <div class="table-data-info"> {{player.name}} </div>
+          <div class="table-data-info"> {{player.team}} </div>
+          <div class="table-data-info"> {{player.position}} </div>
+        </div>
+        <button (click)="removePlayer(player)" class="table-data-remove">x</button>
+      </li>
+    </ul>
+  </div>
+</div>
